@@ -79,6 +79,7 @@ void
 schedule(void) {
     bool intr_flag;
     struct proc_struct *next;
+    // cprintf("sched proc: %d\n", current->pid);
     local_intr_save(intr_flag);
     {
         current->need_resched = 0;

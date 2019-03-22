@@ -26,6 +26,7 @@ schedule(void) {
     bool intr_flag;
     list_entry_t *le, *last;
     struct proc_struct *next = NULL;
+    cprintf("sched proc: %d\n", current->pid);
     local_intr_save(intr_flag);
     {
         current->need_resched = 0;

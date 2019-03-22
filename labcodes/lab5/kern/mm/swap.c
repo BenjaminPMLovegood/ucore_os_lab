@@ -184,6 +184,7 @@ check_swap(void)
      list_entry_t *le = &free_list;
      while ((le = list_next(le)) != &free_list) {
         struct Page *p = le2page(le, page_link);
+        cprintf("Page %x: property = %d\n", p, PageProperty(p));
         assert(PageProperty(p));
         count ++, total += p->property;
      }

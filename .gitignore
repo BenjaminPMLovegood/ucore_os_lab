@@ -1,3 +1,5 @@
+.vscode/
+
 *~
 obj/
 bin/
@@ -20,3 +22,5 @@ a.out
 chytesting
 disk0
 *.orig
+
+*.patch
